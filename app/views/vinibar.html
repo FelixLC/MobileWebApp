@@ -1,0 +1,44 @@
+<!-- 
+  <div class="section">
+
+      <div ng-repeat="wine in WINES">
+        <div class="wine-info col-md-3 span4">
+          <a href="#/vinibar/wines/{{$index + 1}}">
+            <div class="wine-name">
+              <p class="linktoinfo">{{wine.domaine}}<br>
+              {{wine.appellation}} - {{wine.millesime}}</p>
+            </div>
+          </a>
+          <a href="#/vinibar/rating/{{$index + 1}}" class="linktorating">
+            <div class="wine-rating">
+              <p><span class="fui-new linktorating"></span><p>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>
+
+
+ -->
+ <nav-page title="mytitle" id="Vinify">
+
+   <content has-header="true" has-footer="true" overflow-scroll="true">
+
+          <div class="card">
+    <div class="item item-text-wrap" ng-controller="LoginFormController">
+      Vous êtes {{whoisit}}
+    </div>
+  </div>
+            <div class="list card">
+
+              <a ng-repeat="pet in WINES" class="item item-avatar" href="#/vinibar/wines/{{$index + 1}}">
+                <img src="../images/bottle-{{pet.couleur}}.svg" class="iconbottle">
+                <h3>{{pet.domaine}}</h3>
+                <p>{{pet.appellation}} <span class="item-note">{{pet.millesime}}</span></p>
+
+              </a>
+
+            </div>
+          
+  </content>
+</nav-page>

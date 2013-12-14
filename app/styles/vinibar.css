@@ -1,0 +1,320 @@
+body {
+	margin-top: 50px; /* 50px is the height of the navbar - change this if the navbar height changes */
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+
+/* ---------------- PADDING MODAL FIX ---------------- */
+body.modal-open,
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+  margin-right: 0px;
+}
+
+/* ---------------- GENERAL ---------------- */
+
+.section{
+	padding: 40px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.navbar-inverse {
+	padding: 5px 0 5px 6.25px;
+	background-color: #2c3e50;
+}
+
+.group-box{	
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	ms-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0px 20px;
+	margin: 10px auto;
+	color: #5e6d82;
+	text-align: left;
+	border:none;
+	background-color:#ffffff;
+	vertical-align: middle;
+}
+
+
+.group-box:hover{
+	box-shadow:0 1px 1px rgba(0,0,0,0.3)
+}
+
+.flat-container{
+	display: inline-block;
+	background-color: white;  
+	border-bottom-left-radius:4px;
+  	border-bottom-right-radius:4px;
+  	border-top-left-radius:4px;
+  	border-top-right-radius:4px;
+  	font-family:Open Sans, Helvetica, Arial, sans-serif;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+   
+}
+
+.flat-container p {
+	margin: 15px 0;
+}
+
+
+
+/* ---------------- VINIBAR ---------------- */
+
+#vini-header{
+	height:50px;
+	width: 100%;
+	box-sizing: border-box;
+	ms-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0px 20px;
+	margin: 10px auto;
+	color:#fff;
+	text-align: left;
+	border:none;
+	vertical-align: middle;
+	border-bottom-left-radius:4px;
+  	border-bottom-right-radius:4px;
+  	border-top-left-radius:4px;
+  	border-top-right-radius:4px;
+  	font-family:Open Sans, Helvetica, Arial, sans-serif;
+}
+
+
+
+#vinibar{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#profile{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.chateau{
+	color: #34495e;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.wine-info{
+	position: relative;
+	height: 80px;
+	background-color: #2c3e50;
+	display:-moz-box;
+    display:-webkit-box;
+    display:box;
+	box-sizing: border-box;
+	ms-box-sizing: border-box;
+	webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 0;
+	margin: 10px 10px;
+	color:#000;
+	text-align: left;
+	border:none;
+	vertical-align: middle;
+  	font-family:Open Sans, Helvetica, Arial, sans-serif;
+}
+
+
+
+.wine-rating{
+	background-color: rgb(128,0 ,0);
+	text-align: center;
+	color: #fff;
+	height: 100%;
+	width: 25%;
+	position: absolute;
+	top: 0; right: 0;
+
+}
+
+.wine-rating > p, i {
+	line-height: 80px;
+	vertical-align: middle;
+	font-size: 2em;
+
+}
+
+.wine-rating i {
+	line-height: 80px;
+	vertical-align: middle;
+	font-size: 30px;
+
+}
+
+.wine-name {
+	padding: 12px;
+}
+
+.wine-name p {
+	color: #fff;
+}
+
+.dropdown-menu {
+	padding: 20px;
+}
+
+
+/* ---------------- PROFIL ---------------- */
+
+#Nom{
+	text-align: center;
+	color: #2c3e50;
+}
+
+#Rue, #Ville{
+	text-align: center;
+	color: #7f8c8d;
+}
+
+#megusta{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.profile-pic{
+	padding-top: 20px;
+	text-align: center;	
+}
+
+.profile-pic img{
+	width: 70px;
+}
+
+.linktoinfo:hover,
+.linktoinfo:focus,
+.linktoinfo:active {
+	color: #2980b9 ;	
+}
+
+.linktorating:hover,
+.linktorating:focus,
+.linktorating:active {
+	color: #2980b9 ;	
+}
+/* ---------------- LIKED WINES ---------------- */
+
+.table{
+	margin-top: 20px;
+}
+
+.infos{
+	text-align: center;
+}
+
+
+
+
+/* ---------------- MODAL ---------------- */
+
+.notevin{
+	text-align: center;
+
+}
+
+.pic{
+	margin-bottom: 20px;
+}
+
+.pic img {
+	width: 140px;
+}
+
+
+
+footer {
+	margin: 20px 0;
+	background-color: transparent;
+}
+
+#footer {
+	background-color: #2c3e50;
+	color: #ffffff;
+}
+
+
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+#push,
+#footer {
+  height: 60px;
+}
+
+/* RESPONSIVE CSS */
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+
+
+@media (max-width: 668px) {
+
+	#LastWines table td:nth-child(2), 
+	#LastWines table th:nth-child(2) {display: none;}
+
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 375px) {
+
+.section {
+	margin: 0;
+}
+
+#vinibar{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#profile{
+	margin-left: 10px;
+	margin-right: 10px;
+}	
+
+}
+

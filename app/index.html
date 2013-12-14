@@ -1,0 +1,146 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+     <!-- iPhone SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+    <!-- iPhone (Retina) SPLASHSCREEN-->
+    <link href="apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap2.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.css">
+        <!-- <link rel="stylesheet" href="styles/flat-ui.css"/> -->
+        <!-- <link rel="stylesheet" href="styles/vinibar.css"/>
+        <link rel="stylesheet" href="styles/login.css"/> -->
+        <link rel="stylesheet" href="styles/ionic.css"/>
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <!-- endbuild -->
+</head>
+  <body ng-app="vinifyApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+<!-- <div id="wrap">
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+       
+        <div class="navbar-header">
+           <a href="#top"><img alt="" src="../images/LogoVinifyFondSombre.svg" style="height:45px"/></a>
+        </div>
+    </nav>
+
+
+ 
+    <div ng-view="" ng-animate="'slide'"></div>
+
+<div id="push"></div>
+</div> 
+
+<div class="palette-midnight-blue" id="footer">
+
+
+      <footer>
+        <p>
+          Copyright &copy; Vinify 2013 &middot; L'abus d'alcool est dangereux pour la santé, à consommer avec modération.
+        </p>
+      </footer>
+
+  </div>
+ -->
+<pane nav-router animation="slide-left-right-ios7">
+      <!-- The nav bar that will be updated as we navigate -->
+      <nav-bar class="nav-title-slide-ios7" type="bar-light" back-button-type="button-icon" back-button-icon="icon ion-arrow-left-c"></nav-bar>
+
+      <!-- where the content of each page will be rendered -->
+      <ng-view></ng-view>
+      <div class="tabs tabs-global tabs-icon-top">
+        <a class="tab-item" href="#/vinibar">
+          <i class="icon ion-home"></i>
+          Vinibar
+        </a>
+        <a class="tab-item" href="#/rated">
+          <i class="icon ion-star"></i>
+          Notes
+        </a>
+        <a class="tab-item" href="#/contact">
+          <i class="icon ion-ios7-information"></i>
+          Contact
+        </a>
+      </div>
+</pane>
+<!-- <div class="bar bar-header bar-light">
+  <h1 class="title">Vinify</h1>
+</div> -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+      <script src="bower_components/jquery/jquery.js"></script>
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular-animate.js"></script>
+
+        <!-- build:js scripts/plugins.js -->
+       <script src="bower_components/ionic/dist/js/ionic.js"></script>
+       <script src="bower_components/ionic/dist/js/ionic-angular.js"></script>
+       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+       <script src="bower_components/angular-modal/ui-bootstrap-custom-0.1.0-SNAPSHOT.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/controllers/vinibar.js"></script>
+        <script src="scripts/controllers/winelist.js"></script>
+        <script src="scripts/controllers/wine-rating.js"></script>
+
+        <script src="scripts/services/CurrentWines.js"></script>
+        <script src="scripts/services/vinibar-resources.js"></script>
+        <script src="scripts/services/RatedWines.js"></script>
+        <script src="scripts/services/localizedMessages.js"></script>
+
+        <script src="scripts/security/index.js"></script>
+        <script src="scripts/security/interceptor.js"></script>
+        <script src="scripts/security/retryQueue.js"></script>
+        <script src="scripts/security/security.js"></script>
+        <script src="scripts/security/login/login.js"></script>
+        <script src="scripts/security/login/toolbar.js"></script>
+        <script src="scripts/security/login/LoginFormController.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
