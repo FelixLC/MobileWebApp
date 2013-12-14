@@ -49,6 +49,10 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
         templateUrl: 'scripts/security/login/form.tpl.html',
         controller: 'LoginFormController'
       })
+      .when('/main', {
+        templateUrl: 'views/admin.html',
+        controller: 'AdminController'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -4,34 +4,10 @@ angular.module('vinifyApp')
   // .factory('WinesVinibar',function($resource){
   //   return $resource('http://devinify1.herokuapp.com/wines/');    
   //   })
-  .controller('GetWinesVinibarCtrl', function($scope, VinibarWines){
-    // $scope.WINES = WinesVinibar.query();
-    // $scope.mytitle = 'Vinify';
-    VinibarWines.getWines(
-      // Success
-      function(cda){
-        $scope.WINES=cda;
-      }, 
-    // Failure
-      function(error){
-        console.log(error);
-      });
-  })
-  .controller("WineInfoCtrl", function (VinibarWines, $scope, $routeParams) {
-	  $scope.id = $routeParams.id -1;
-	  VinibarWines.getWines(
-      // Success
-      function(cda){
-        $scope.WINES=cda;
-      }, 
-    // Failure
-      function(error){
-        console.log(error);
-      });
-	})
   .factory('VinibarWines', function($resource){
     return {
       wines: null,
+      allwines: null,
       getWines: function(success, failure) {
         var that = this;
         if (that.wines) {
@@ -42,6 +18,21 @@ angular.module('vinifyApp')
             function(abc){
               that.wines = abc;
               success(that.wines);
+            }, 
+            failure
+            );
+        }
+      },
+      getAllWines: function(success, failure) {
+        var that = this;
+        if (that.allwines) {
+          success(that.allwines);
+        }
+        else {
+          $resource('http://devinify1.herokuapp.com/wines/').query(
+            function(abc){
+              that.wines = abc;
+              success(that.allwines);
             }, 
             failure
             );

@@ -68,6 +68,7 @@ angular.module('security.service', [
                             }
                     });
       return request.then(function(response) {
+
         service.currentUser = response.data.email;
         // if ( service.isAuthenticated() ) {
         //   closeLoginDialog(true);
