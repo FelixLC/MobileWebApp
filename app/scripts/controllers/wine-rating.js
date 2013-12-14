@@ -9,23 +9,23 @@ angular.module('vinifyApp')
 
       $scope.description = function() {
 
-        if (value==1)
+        if (value === 1)
             {
             $scope.overStar = "Je n'ai pas aimé";
             }
-          else if (value==2)
+          else if (value === 2)
             {
             $scope.overStar = "Pas mal";
             }
-          else if (value==3)
+          else if (value === 3)
             {
             $scope.overStar="Bon";
             }
-          else if (value==4)
+          else if (value === 4)
             {
             $scope.overStar="Très Bon";
             }
-          else if (value==5)
+          else if (value === 5)
             {
             $scope.overStar="Excellent";
             }

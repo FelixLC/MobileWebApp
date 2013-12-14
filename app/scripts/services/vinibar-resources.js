@@ -38,7 +38,7 @@ angular.module('vinifyApp')
           success(that.wines);
         }
         else {
-          $resource('http://devinify1.herokuapp.com/vinibarwines/').query(
+          $resource('http://devinify1.herokuapp.com/vinibarlist/').query(
             function(abc){
               that.wines = abc;
               success(that.wines);
