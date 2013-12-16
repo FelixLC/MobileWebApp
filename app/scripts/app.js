@@ -68,7 +68,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
     // Use our scope for the scope of the modal to keep it simple
     scope: $scope,
     // The animation we want to use for the modal entrance
-    animation: 'fade-in'
+    animation: 'slide-in-right'
   });
 
   $scope.rightButtons = [

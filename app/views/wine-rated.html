@@ -21,10 +21,10 @@
 
             <div class="list card">
 
-              <a ng-repeat="pet in WINES" class="item item-icon-left" href="#/vinibar/wines/{{$index + 1}}">
+              <a ng-repeat="wine in WINES" class="item item-icon-left" href="#/vinibar/wines/{{$index + 1}}">
                 <i class="icon ion-wineglass"></i>
-                <h3>{{pet.domaine}}</h3>
-                <p>{{pet.appellation}} <span class="badge badge-{{pet.couleur}}">{{pet.millesime}}</span></p>
+                <h3>{{wine.domaine}}</h3>
+                <p>{{wine.appellation}} <span class="badge badge-{{wine.couleur}}">{{wine.millesime}}</span></p>
 
               </a>
 
