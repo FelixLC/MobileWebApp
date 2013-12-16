@@ -54,7 +54,7 @@ angular.module('security.service', [
 
     // Show the modal login dialog
     showLogin: function() {
-      openLoginDialog();
+     redirect('/login');
     },
 
     // Attempt to authenticate a user by the given email and password
@@ -86,7 +86,7 @@ angular.module('security.service', [
 
     // Logout the current user and redirect
     logout: function(redirectTo) {
-      $http.post('/logout').then(function() {
+      $http.post('/logout/').then(function() {
         service.currentUser = null;
         redirect(redirectTo);
       });

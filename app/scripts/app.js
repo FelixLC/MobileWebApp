@@ -59,7 +59,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       });
   })
 
-.controller('ModalCtrl', function($scope, Modal, security) {
+.controller('ModalCtrl', function($http, $scope, Modal, security) {
   $scope.whoisit = security.currentUser;
   $scope.whoami = security.currentUserData;
 
@@ -90,6 +90,10 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
     { name: 'Lamarr the Headcrab' }
   ];
 
+  $scope.logout = function() {
+      $scope.modal.hide();
+      security.logout('/login');
+    };
   $scope.openModal = function() {
     $scope.modal.show();
   };
