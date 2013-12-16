@@ -27,9 +27,10 @@ color: #fff;
 color: #fff;
 }
 
-.button.button-positive.button-outline {
+.button.button-assertive.button-outline {
       border-color: #800000;
-      color: #800000; }
+      color: #800000;
+      background-color: #ffffff; }
 
 
 .btn-primary {
@@ -134,4 +135,16 @@ a:hover, a:active, a:focus {
 
 #PostVinibar{
   margin: 20px;
+}
+
+/* ----- MODAL ----- */
+
+.bar.bar-assertive {
+    background-color: #800000;
+    border-color: #800000;
+    background-image: linear-gradient(0deg, #dddddd, #dddddd 50%, transparent 50%);
+    color: #fff; }
+
+#email{
+    color: #800000;
 }

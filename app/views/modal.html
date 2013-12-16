@@ -1,0 +1,19 @@
+<div class="modal">
+      <header class="bar bar-header bar-assertive">
+        <h1 class="title">Logout</h1>
+        <button class="button button-assertive button-outline" ng-click="closeModal()">Annuler</button>
+      </header>
+      <content has-header="true">
+        <div class="padding">
+          <div class="list">
+            <div class="item">
+              <span class="input-label">{{whoami.first_name}} {{whoami.last_name}}</span>
+            </div>
+            <div class="item">
+              <span class="input-label">Email associé:  <span id="email">{{whoisit}}</span> </span>
+            </div>
+            <button class="button button-full button-positive" ng-click="logout()">Se déconnecter</button>
+          </div>
+        </div>
+      </content>
+</div>

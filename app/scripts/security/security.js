@@ -70,6 +70,7 @@ angular.module('security.service', [
       return request.then(function(response) {
 
         service.currentUser = response.data.email;
+        service.currentUserData = response.data;
         // if ( service.isAuthenticated() ) {
         //   closeLoginDialog(true);
         // }
@@ -100,6 +101,7 @@ angular.module('security.service', [
           //Success: set currentUser
           function(response) {
             service.currentUser = response.data.email;
+            service.currentUserData = response.data;
             return service.currentUser;
           },
           //Error: Reroute User to login

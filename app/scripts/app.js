@@ -10,7 +10,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   'security'
 ])
 
-  .run(['security', function(security) {
+  .run(['security', '$rootScope', function(security, $rootScope) {
   // Get the current user when the application starts
   // (in case they are still logged in from a previous session)
   security.requestCurrentUser();
@@ -59,16 +59,19 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       });
   })
 
-.controller('ModalCtrl', function($scope, Modal) {
+.controller('ModalCtrl', function($scope, Modal, security) {
+  $scope.whoisit = security.currentUser;
+  $scope.whoami = security.currentUserData;
+
 
   // Load the modal from the given template URL
-  Modal.fromTemplateUrl('modal.html', function(modal) {
+  Modal.fromTemplateUrl('views/modal.html', function(modal) {
     $scope.modal = modal;
   }, {
     // Use our scope for the scope of the modal to keep it simple
     scope: $scope,
     // The animation we want to use for the modal entrance
-    animation: 'slide-in-right'
+    animation: 'slide-in-up'
   });
 
   $scope.rightButtons = [
