@@ -14,12 +14,12 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   // Get the current user when the application starts
   // (in case they are still logged in from a previous session)
   security.requestCurrentUser();
-  }])
+}])
 
   .config(function ($compileProvider){
   // Needed for routing to work
   $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
-  })
+})
 
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -49,7 +49,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
         templateUrl: 'scripts/security/login/form.tpl.html',
         controller: 'LoginFormController'
       })
-      .when('/main', {
+      .when('/admin', {
         templateUrl: 'views/admin.html',
         controller: 'AdminController'
       })

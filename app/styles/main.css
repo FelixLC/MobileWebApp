@@ -85,7 +85,7 @@ a:hover, a:active, a:focus {
 }
 
 #max {
-  color: #27ae60;
+  color: #c0392b;
 }
 
 /* ----- VINIBAR ----- */
@@ -116,8 +116,22 @@ a:hover, a:active, a:focus {
   color: #800000;
 }
 
-#social img {
-  height: 80px;
-  margin: 5px;
+.button.button-positive {
+  border-color: #253544;
+  color: #ffffff;
+  background-color: #253544;
 }
 
+#validatecontainer {
+  text-align: center;
+}
+
+/* ----- ADMIN ----- */
+
+#AdminFormContainer{
+  padding: 40px;
+}
+
+#PostVinibar{
+  margin: 20px;
+}

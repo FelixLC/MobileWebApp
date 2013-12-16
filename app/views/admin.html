@@ -1,5 +1,32 @@
+<nav-page title="mytitle" id="Vinify">
 
-              <select>
-                <option ng-repeat="wine in WINES">{{wine.domaine}} - {{wine.millesime}}</option>
-                
-              </select
+   <content has-header="true" has-footer="true" overflow-scroll="true">
+     <div id="AdminFormContainer">
+        <form name="PostData">
+
+          <div class="row">
+            <div class="col">
+              <h4>Username</h4>
+                <select ng-model="A[0]" ng-name="username" ng-options="user.email as user.email for user in users">
+                </select>
+            </div>
+
+            <div class="col">
+                <div ng-repeat="number in winenumber">
+                  <h4>{{number}}</h4>
+                    <select ng-model="A[$index+1]" ng-name="a[$index+1]" ng-options="item.id as item.domaine for item in WINES">
+                    </select>
+                </div>
+            </div>
+
+            <div class="col">
+                <button class="button button-positive" id="PostVinibar" ng-click="PostWines()">Create Vinibar</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+          
+  </content>
+</nav-page>

@@ -14,25 +14,10 @@ angular.module('vinifyApp')
           success(that.wines);
         }
         else {
-          $resource('http://devinify1.herokuapp.com/vinibarlist/').query(
+          $resource('/vinibarlist/').query(
             function(abc){
               that.wines = abc;
               success(that.wines);
-            }, 
-            failure
-            );
-        }
-      },
-      getAllWines: function(success, failure) {
-        var that = this;
-        if (that.allwines) {
-          success(that.allwines);
-        }
-        else {
-          $resource('http://devinify1.herokuapp.com/wines/').query(
-            function(abc){
-              that.wines = abc;
-              success(that.allwines);
             }, 
             failure
             );

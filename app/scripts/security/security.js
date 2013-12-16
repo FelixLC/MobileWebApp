@@ -60,7 +60,7 @@ angular.module('security.service', [
     // Attempt to authenticate a user by the given email and password
     login: function(email, password) {
       var request = $http({
-                            url: 'http://devinify1.herokuapp.com/login/',
+                            url: '/login/',
                             method: "POST",
                             data: 'username=' + email + '&password=' + password,
                             headers: {
@@ -96,8 +96,8 @@ angular.module('security.service', [
       if ( service.isAuthenticated() ) {
         return $q.when(service.currentUser);
       } else {
-        return $http.get('http://devinify1.herokuapp.com/isloggedin').then(function(response) {
-          service.currentUser = response.data.user;
+        return $http.get('/isloggedin/').then(function(response) {
+          service.currentUser = response.data.email;
           return service.currentUser;
         });
       }

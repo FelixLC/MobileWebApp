@@ -11,29 +11,27 @@
 			  </div>
 
 			  <div class="item item-body">
-			    <p>
-			      <h3>Je note le vin sur 4 : <span class="badge badge-{{value}}">{{value}}</h3>
-				    <div class="range">
-					  <i class="fa fa-minus-circle" id="minus"></i>
-					  <input type="range" name="rating" max="4" min="1" step="1" ng-model="value">
-					  <i class="fa fa-plus-circle" id="max" scope="" onload=""></i>
-					  
+			    <form name="ratingform" ng-controller="WineRatingCtrl">
+			      <h3>Je note le vin sur 4 : <span class="badge badge-Rouge">{{B[0]}}</h3>
+				    <div class="range range-positive">
+					  <i class="fa fa-heart-o" id="minus"></i>
+					  	<input type="range" name="rating" max="4" min="1" step="1" ng-model="B[0]">
+					  <i class="fa fa-heart" id="max" scope="" onload=""></i>
 					</div>
-			    </p>
-			  </div>
 
-			  <div class="item tabs tabs-secondary tabs-icon-left">
-			    <a class="tab-item" href="#/vinibar/rating/{{id + 1}}">
-			      <i class="icon ion-chatbox"></i>
-			      Noter !
-			    </a>
-			    <a class="tab-item" href="mailto:antoine@vinify.co?subject=Commande%20de%20{{WINES[id].domaine}}&body=Bonjour%2C%0AJe%20voudrais%20effectuer%20une%20commande%20de%20vin.%0A%0AR%C3%A9f%C3%A9rence%3A%20{{WINES[id].domaine}},%20{{WINES[id].appellation}},%20{{WINES[id].millesime}}%0ANombre%20de%20caisses%3A%20%5BX%5D%0A%0AMerci%20de%20m'indiquer%20la%20disponibilit%C3%A9.%0A%0ACordialement%2C%0A">
-			      <i class="icon ion-share"></i>
-			      Commander
-			    </a>
-			  </div>
 
+
+					<h3>Mon commentaire libre:</h3>
+					<input type="text" name="commentaire" ng-model="B[1]">
+				</form>
+			   
+			  </div>  
 		</div>
+			
+		<div id="validatecontainer">
+		    <button class="button button-positive" ng-click="PostComment()">	Je note ce vin !
+		    </button>
+	  	</div>
 
 	</content>
 </nav-page>	
