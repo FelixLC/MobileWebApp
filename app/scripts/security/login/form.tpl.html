@@ -1,24 +1,21 @@
-<form name="form" novalidate class="login-form">
-    <div class="modal-header">
-        <h4>Sign in</h4>
-    </div>
-    <div class="modal-body">
-        <div class="alert alert-warning" ng-show="authReason">
-            {{authReason}}
-        </div>
-        <div class="alert alert-error" ng-show="authError">
-            {{authError}}
-        </div>
-        <div class="alert alert-info">Please enter your login details, you are {{cookieid}}</div>
-        <label>E-mail</label>
-        <input name="login" type="email" ng-model="user.email" required autofocus>
-        <label>Password</label>
-        <input name="pass" type="password" ng-model="user.password" required>
-    </div>
-    <div class="modal-footer">
-        <button class="btn clear">{{whoisit}}</button>
-        <button class="btn btn-primary login" ng-click="login()" ng-disabled='form.$invalid'>Sign in</button>
-        <button class="btn clear" ng-click="clearForm()">Clear</button>
-        <button class="btn btn-warning cancel" ng-click="cancelLogin()">Cancel</button>
-    </div>
-</form>
+<content has-header="true" has-footer="true">
+
+  <div class="list card">
+    <h5>Merci de vous connecter pour accéder à votre Vinibar</h5>
+  </div>
+
+  <form name="form" novalidate>        
+          <div class="list">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Email</span>
+              <input name="login" type="email" ng-model="user.email" required placeholder="John">
+            </label>
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Mot de Passe</span>
+              <input name="pass" type="password" ng-model="user.password" required placeholder="Cabernet Sauvage">
+            </label>
+          </div>
+
+          <button class="button button-positive" ng-click="login()" ng-disabled='form.$invalid'>Se connecter</button>
+  </form>
+</content>

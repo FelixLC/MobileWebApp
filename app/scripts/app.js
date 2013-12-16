@@ -24,7 +24,8 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/login.html'
+        templateUrl: 'views/vinibar.html',
+        controller: 'GetWinesVinibarCtrl'
       })
       .when('/vinibar', {
         templateUrl: 'views/vinibar.html',
@@ -56,4 +57,40 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       .otherwise({
         redirectTo: '/'
       });
+  })
+
+.controller('ModalCtrl', function($scope, Modal) {
+
+  // Load the modal from the given template URL
+  Modal.fromTemplateUrl('modal.html', function(modal) {
+    $scope.modal = modal;
+  }, {
+    // Use our scope for the scope of the modal to keep it simple
+    scope: $scope,
+    // The animation we want to use for the modal entrance
+    animation: 'fade-in'
   });
+
+  $scope.rightButtons = [
+    { 
+      type: 'button-positive',
+      content: '<i class="icon ion-navicon"></i>',
+      tap: function() {
+        $scope.openModal();
+      }
+    }
+  ];
+  // Test data
+  $scope.contacts = [
+    { name: 'Gordon Freeman' },
+    { name: 'Barney Calhoun' },
+    { name: 'Lamarr the Headcrab' }
+  ];
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+});

@@ -96,10 +96,17 @@ angular.module('security.service', [
       if ( service.isAuthenticated() ) {
         return $q.when(service.currentUser);
       } else {
-        return $http.get('/isloggedin/').then(function(response) {
-          service.currentUser = response.data.email;
-          return service.currentUser;
-        });
+        return $http.get('/isloggedin/').then(
+          //Success: set currentUser
+          function(response) {
+            service.currentUser = response.data.email;
+            return service.currentUser;
+          },
+          //Error: Reroute User to login
+          function(){
+            $location.path('/login');
+          }
+        );
       }
     },
 

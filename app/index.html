@@ -66,30 +66,58 @@
 
   </div>
  -->
-<pane nav-router animation="slide-left-right-ios7">
-      <!-- The nav bar that will be updated as we navigate -->
-      <nav-bar class="nav-title-slide-ios7" type="bar-light" back-button-type="button-icon" back-button-icon="icon ion-arrow-left-c"></nav-bar>
+<div ng-controller="ModalCtrl">
+  <pane nav-router animation="slide-left-right-ios7">
+        <!-- The nav bar that will be updated as we navigate -->
+        <nav-bar class="nav-title-slide-ios7" type="bar-light" back-button-type="button-icon" back-button-icon="icon ion-arrow-left-c"><button class="button">Edit</button></nav-bar>
 
-      <!-- where the content of each page will be rendered -->
-      <ng-view></ng-view>
-      <div class="tabs tabs-global tabs-icon-top">
-        <a class="tab-item" href="#/vinibar">
-          <i class="icon ion-home"></i>
-          Vinibar
-        </a>
-        <a class="tab-item" href="#/rated">
-          <i class="icon ion-star"></i>
-          Notes
-        </a>
-        <a class="tab-item" href="#/contact">
-          <i class="icon ion-ios7-information"></i>
-          Contact
-        </a>
-      </div>
-</pane>
-<!-- <div class="bar bar-header bar-light">
-  <h1 class="title">Vinify</h1>
-</div> -->
+        <!-- where the content of each page will be rendered -->
+        <ng-view></ng-view>
+        <div class="tabs tabs-global tabs-icon-top">
+          <a class="tab-item" href="#/vinibar">
+            <i class="icon ion-home"></i>
+            Vinibar
+          </a>
+          <a class="tab-item" href="#/rated">
+            <i class="icon ion-star"></i>
+            Notes
+          </a>
+          <a class="tab-item" href="#/contact">
+            <i class="icon ion-ios7-information"></i>
+            Contact
+          </a>
+        </div>
+  </pane>
+
+  <script id="modal.html" type="text/ng-template">
+    <div class="modal">
+      <header class="bar bar-header bar-positive">
+        <h1 class="title">New Contact</h1>
+        <button class="button button-clear button-positive" ng-click="closeModal()">Cancel</button>
+      </header>
+      <content has-header="true">
+        <div class="padding">
+          <div class="list">
+            <label class="item item-input">
+              <span class="input-label">First Name</span>
+              <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Last Name</span>
+              <input type="text" placeholder="">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="text" placeholder="">
+            </label>
+            <button class="button button-full button-positive" ng-click="closeModal()">Create</button>
+          </div>
+        </div>
+      </content>
+    </div>
+  </script>
+</div>
+
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
