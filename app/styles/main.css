@@ -47,6 +47,17 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
+button[disabled]{
+  cursor: default; 
+  background-color: red;
+}
+
+.button.button-positive:active {
+background-color: #800000;
+box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
+border-color: #800000;
+}
+
 /* ----- RATING ----- */
 
 .fa-star, .fa-star-o {
@@ -109,6 +120,10 @@ a:hover, a:active, a:focus {
    /* height: 40px;
     margin-top: 4.5px;
     margin-bottom: 4.5px;*/
+}
+
+#logout{
+  height: 40px;
 }
 
 /* ----- RATING ----- */

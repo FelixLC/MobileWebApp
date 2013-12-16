@@ -60,9 +60,16 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   })
 
 .controller('ModalCtrl', function($http, $scope, Modal, security) {
-  $scope.whoisit = security.currentUser;
-  $scope.whoami = security.currentUserData;
-
+  $scope.$watch(function() {
+        return security.currentUser;
+      }, function(currentUser) {
+        $scope.currentUser = currentUser;
+      });
+  $scope.$watch(function() {
+        return security.currentUserData;
+      }, function(currentUserData) {
+        $scope.currentUserData = currentUserData;
+      });
 
   // Load the modal from the given template URL
   Modal.fromTemplateUrl('views/modal.html', function(modal) {

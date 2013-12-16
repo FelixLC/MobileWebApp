@@ -114,6 +114,7 @@ angular.module('security.service', [
 
     // Information about the current user
     currentUser: null,
+    currentUserData: null,
 
     // Is the current user authenticated?
     isAuthenticated: function(){

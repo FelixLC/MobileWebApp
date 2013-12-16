@@ -33,7 +33,7 @@ angular.module('security.login.form', ['services.localizedMessages'])
       else { $location.path('/vinibar'); }
     }, function(x) {
       // If we get here then there was a problem with the login request to the server
-      $scope.authError = localizedMessages.get('login.error.serverError', { exception: x });
+      $scope.authError = localizedMessages.get('login.error.serverError');
     });
   };
 
