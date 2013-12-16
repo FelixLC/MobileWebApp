@@ -142,6 +142,10 @@ border-color: #800000;
   text-align: center;
 }
 
+#check {
+  margin-bottom: -8px;
+}
+
 /* ----- ADMIN ----- */
 
 #AdminFormContainer{

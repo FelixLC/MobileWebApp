@@ -1,14 +1,22 @@
 'use strict';
 
 angular.module('vinifyApp')
-  .controller('WineRatingCtrl', function ($scope) {
+  .controller('WineRatingCtrl', function ($http, $scope) {
     $scope.B=[];
-    $scope.PostComment = function(){
-          var dataset = "rating=" + $scope.B[0]
-                      + "&comment=" + $scope.B[1];
+    $scope.B[2]=true;
 
+    
+
+
+    $scope.PostComment = function(){
+
+        var dataset = "wine=" + $scope.B[0]
+                      + "&rating=" + $scope.B[1]
+                      + "&comment=" + $scope.B[2]
+                      + "&get_more=" + $scope.B[3];
+          
         var request = $http({
-                              url: '/ratewines/',
+                              url: '/rate/',
                               method: "POST",
                               data: dataset,
                               headers: {

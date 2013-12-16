@@ -15,23 +15,30 @@
 			      <h3>Je note le vin sur 4 : <span class="badge badge-Rouge">{{B[0]}}</h3>
 				    <div class="range range-positive">
 					  <i class="fa fa-heart-o" id="minus"></i>
-					  	<input type="range" name="rating" max="4" min="1" step="1" ng-model="B[0]">
+					  	<input type="range" ng-name="rating" max="4" min="1" step="1" ng-model="B[0]">
 					  <i class="fa fa-heart" id="max" scope="" onload=""></i>
 					</div>
 
-
-
 					<h3>Mon commentaire libre:</h3>
-					<input type="text" name="commentaire" ng-model="B[1]">
+					<input type="text" ng-name="commentaire" ng-model="B[1]">
+
+					<label class="checkbox">
+       					<input type="checkbox" ng-name="oneagain" ng-model="B[2]" id="check">
+       					J'aimerais revoir un jour ce vin dans mon Vinibar (cocher si oui)
+     				</label>
+
+     				{{dataset}}
+     				<div id="validatecontainer">
+					    <button class="button button-positive" ng-click="PostComment()">	Je note ce vin !
+					    </button>
+	  				</div>
+
 				</form>
 			   
 			  </div>  
 		</div>
 			
-		<div id="validatecontainer">
-		    <button class="button button-positive" ng-click="PostComment()">	Je note ce vin !
-		    </button>
-	  	</div>
+		
 
 	</content>
 </nav-page>	
