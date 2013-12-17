@@ -1,0 +1,29 @@
+ <nav-page title="mytitle">
+	<content has-header="true" has-footer="true">
+		 <div class="list card">
+		  <div class="item item-avatar">
+		  <img src="images/castle.svg">
+		    <h2>{{RBOTTLES[id].wine.display_name}}<span class="badge badge-{{RBOTTLES[id].wine.couleur}}">{{RBOTTLES[id].rating}}</span></h2>
+		    <p>{{RBOTTLES[id].wine.region}} <span class="item-note">{{RBOTTLES[id].wine.cepage}}</span> </p>
+		  </div>
+
+		  <div class="item item-divider">
+		    	Ma note de dégustation
+			</div>
+
+		  <div class="item item-body">
+		    <p>
+		      {{RBOTTLES[id].comment}}
+		    </p>
+		  </div>
+
+		  <div class="item tabs tabs-secondary tabs-icon-left">
+		    <a class="tab-item noter">
+		      <i class="icon ion-thumbsup"></i>
+		      J'ai souhaité revoir ce vin dans mon vinibar
+		    </a>
+		  </div>
+
+		</div>
+	</content>
+</nav-page>

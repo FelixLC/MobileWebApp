@@ -39,9 +39,13 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
         templateUrl: 'views/wine-rating.html',
         controller: 'WineInfoCtrl'
       })
+      .when('/vinibar/rated/:id', {
+        templateUrl: 'views/wine-rated-info.html',
+        controller: 'RatedWinesInfoCtrl'
+      })
       .when('/rated', {
         templateUrl: 'views/wine-rated.html',
-        controller: 'GetWinesVinibarCtrl'
+        controller: 'RatedWinesCtrl'
       })
       .when('/contact', {
         templateUrl: 'views/contact.html'
