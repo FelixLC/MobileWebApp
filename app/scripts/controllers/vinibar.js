@@ -10,7 +10,7 @@ angular.module('vinifyApp')
         VinibarWines.getWines(
           // Success
           function(cda){
-            $scope.WINES=cda;
+            $scope.BOTTLES=cda;
           }, 
         // Failure
           function(error){
@@ -22,7 +22,7 @@ angular.module('vinifyApp')
       VinibarWines.getWines(
           // Success
           function(cda){
-            $scope.WINES=cda;
+            $scope.BOTTLES=cda;
           }, 
         // Failure
           function(error){

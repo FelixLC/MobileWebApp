@@ -10,7 +10,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   'security'
 ])
 
-  .run(['security', '$rootScope', function(security, $rootScope) {
+  .run(['security', function(security) {
   // Get the current user when the application starts
   // (in case they are still logged in from a previous session)
   security.requestCurrentUser();
@@ -60,6 +60,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   })
 
 .controller('ModalCtrl', function($http, $scope, Modal, security, $route, $location) {
+  $scope.mytitle='Vinify'
   $scope.$on('$routeChangeSuccess', function() {
     var path = $location.path();
     console.log(path);

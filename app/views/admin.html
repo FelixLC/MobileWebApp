@@ -14,7 +14,7 @@
             <div class="col">
                 <div ng-repeat="number in winenumber">
                   <h4>{{number}}</h4>
-                    <select ng-model="A[$index+1]" ng-name="a[$index+1]" ng-options="item.id as item.domaine for item in WINES">
+                    <select ng-model="A[$index+1]" ng-name="a[$index+1]" ng-options="item.id as item.display_name for item in WINES">
                     </select>
                 </div>
             </div>

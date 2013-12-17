@@ -6,3 +6,5 @@ Noter le vin garder list avatar badges
 Range color
 Mettre la note à gauche (coeur qui se remplit)
 Noté il y a N jours
+
+Refresh: logout login ratewine

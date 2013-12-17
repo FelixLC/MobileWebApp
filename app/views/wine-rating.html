@@ -6,8 +6,8 @@
 
 			  <div class="item item-avatar">
 			  <img src="images/castle.svg">
-			    <h2>{{WINES[id].domaine}}</h2>
-			    <p>{{WINES[id].appellation}}</p>
+			    <h2>{{BOTTLES[id].wine.display_name}}</h2>
+			    <p>{{BOTTLES[id].wine.region}}</p>
 			  </div>
 
 			  <div class="item item-body" ng-controller="WineRatingCtrl">
@@ -27,7 +27,7 @@
        					J'aimerais revoir un jour ce vin dans mon Vinibar (cocher si oui)
      				</label>
 
-     				{{dataset}}
+
      				<div id="validatecontainer">
 					    <button class="button button-positive" ng-click="PostComment()">	Je note ce vin !
 					    </button>

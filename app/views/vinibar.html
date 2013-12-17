@@ -23,10 +23,10 @@
  <nav-page title="mytitle" id="Vinify" right-buttons="rightButtons">
    <content has-header="true" has-footer="true" overflow-scroll="true">
             <div class="list">
-              <a ng-repeat="wine in WINES" class="item item-avatar" href="#/vinibar/wines/{{$index + 1}}">
-                <img src="images/bottle-{{wine.couleur}}.svg" class="iconbottle">
-                <h3>{{wine.domaine}}</h3>
-                <p>{{wine.appellation}} <span class="item-note">{{wine.millesime}}</span></p>
+              <a ng-repeat="bottle in BOTTLES" class="item item-avatar" href="#/vinibar/wines/{{$index + 1}}">
+                <img src="images/bottle-{{bottle.wine.couleur}}.svg" class="iconbottle">
+                <h3>{{bottle.wine.diplay_name}}</h3>
+                <p>{{bottle.wine.region}} <span class="item-note">{{bottle.wine.millesime}}</span></p>
 
               </a>
 

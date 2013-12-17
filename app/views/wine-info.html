@@ -1,34 +1,10 @@
-<!-- <div class="container section">
-	<div class="span8">
-		<div class="row">
-			<h4><img src="../images/castle.svg"> {{WINE[id].domaine}}</h4> 
-			<h5>{{WINE[id].appellation}}</h5>
-		</div>
-
-		<div class="row">
-			<h4><img src="../images/france.svg"> {{WINE[id].region}}</h4>
-		</div>
-
-		<div class="row">
-			<h4>Millésime : {{WINE[id].millesime}}</h4>
-		</div>
-
-		<div class="row">
-			<h4><img src="../images/comment.svg"> {{WINE[id].description}}</h4>
-		</div>
-		
-	</div>
-</div>
- -->
  <nav-page title="mytitle">
 	<content has-header="true" has-footer="true">
 		 <div class="list card">
 		  <div class="item item-avatar">
 		  <img src="images/castle.svg">
-		    <h2>{{WINES[id].domaine}}<span class="badge badge-{{WINES[id].couleur}}">{{WINES[id].millesime}}</span></h2>
-		    <p>{{WINES[id].appellation}} <span class="item-note">Gamay</span> </p>
-
-
+		    <h2>{{BOTTLES[id].wine.display_name}}<span class="badge badge-{{BOTTLES[id].wine.couleur}}">{{BOTTLES[id].wine.millesime}}</span></h2>
+		    <p>{{BOTTLES[id].wine.region}} <span class="item-note">{{BOTTLES[id].wine.cepage}}</span> </p>
 		  </div>
 
 		  <div class="item item-divider">
@@ -37,7 +13,7 @@
 
 		  <div class="item item-body">
 		    <p>
-		      Véritable révélation du Languedoc consacrée sur le terroir de la montagne d’Alaric en Corbières, le Château de la Baronne produit en bio des cuvées somptueuses, précises et franches. Très vieilles vignes et pur cépage, sélection de terroirs parfaitement accomplie, les vins que nous proposons aujourd’hui sont tout simplement exceptionnels … 
+		      {{BOTTLES[id].wine.description}}
 		    </p>
 		  </div>
 
@@ -47,10 +23,13 @@
 
 		  <div class="item item-body">
 		    <p>
-		      <i class="icon ion-thermometer"></i> 12°C <span id="carafe"><i class="icon ion-beaker"></i>2h avant </span>
+		      <i class="icon ion-thermometer"></i> {{BOTTLES[id].wine.temp}}°C
 		    </p>
 		    <p>
 		      Accords Mets / Vin :
+		    </p>
+		    <p>
+		    	{{BOTTLES[id].wine.food}}
 		    </p>
 		  </div>
 
@@ -59,7 +38,7 @@
 		      <i class="icon ion-chatbox"></i>
 		      Noter ce vin
 		    </a>
-		    <a class="tab-item" href="mailto:antoine@vinify.co?subject=Commande%20de%20{{WINES[id].domaine}}&body=Bonjour%2C%0AJe%20voudrais%20effectuer%20une%20commande%20de%20vin.%0A%0AR%C3%A9f%C3%A9rence%3A%20{{WINES[id].domaine}},%20{{WINES[id].appellation}},%20{{WINES[id].millesime}}%0ANombre%20de%20caisses%3A%20%5BX%5D%0A%0AMerci%20de%20m'indiquer%20la%20disponibilit%C3%A9.%0A%0ACordialement%2C%0A">
+		    <a class="tab-item" href="mailto:antoine@vinify.co?subject=Commande%20de%20{{BOTTLES[id].wine.display_name}}&body=Bonjour%2C%0AJe%20voudrais%20effectuer%20une%20commande%20de%20vin.%0A%0AR%C3%A9f%C3%A9rence%3A%20{{BOTTLES[id].wine.display_name}},%20{{BOTTLES[id].wine.region}},%20{{BOTTLES[id].wine.millesime}}%0ANombre%20de%20caisses%3A%20%5BX%5D%0A%0AMerci%20de%20m'indiquer%20la%20disponibilit%C3%A9.%0A%0ACordialement%2C%0A">
 		      <i class="icon ion-share"></i>
 		      Commander
 		    </a>
@@ -67,32 +46,3 @@
 		</div>
 	</content>
 </nav-page>
-
-<!-- <div class="conteneur">
-
-  <div class="item item-icon-right">
-    {{WINE[id].domaine}} - {{WINE[id].appellation}}
-    <a href=""><i class="icon ion-chatboxes"></i></a>
-  </div>
-
-  <a class="item item-icon-left item-icon-right" href="#">
-    <i class="icon ion-chatbubble-working"></i>
-    Call Ma
-    <i class="icon ion-ios7-telephone-outline"></i>
-  </a>
-
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-mic-a"></i>
-    Record album
-    <span class="item-note">
-      Grammy
-    </span>
-  </a>
-
-  <a class="item item-icon-left" href="#">
-    <i class="icon ion-person-stalker"></i>
-    Friends
-    <span class="badge badge-assertive">0</span>
-  </a>
-
-</div> -->

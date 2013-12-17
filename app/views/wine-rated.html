@@ -16,15 +16,12 @@
 
 
  <nav-page title="mytitle" id="Vinify">
-
    <content has-header="true" has-footer="true" overflow-scroll="true">
-
             <div class="list card">
-
-              <a ng-repeat="wine in WINES" class="item item-icon-left" href="#/vinibar/wines/{{$index + 1}}">
+              <a ng-repeat="bottle in BOTTLES" class="item item-icon-left" href="#/vinibar/wines/{{$index + 1}}">
                 <i class="icon ion-wineglass"></i>
-                <h3>{{wine.domaine}}</h3>
-                <p>{{wine.appellation}} <span class="badge badge-{{wine.couleur}}">{{wine.millesime}}</span></p>
+                <h3>{{bottle.wine.display_name}}</h3>
+                <p>{{bottle.wine.region}} <span class="badge badge-{{bottle.wine.couleur}}">{{bottle.wine.millesime}}</span></p>
 
               </a>
 

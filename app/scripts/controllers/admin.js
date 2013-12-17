@@ -7,7 +7,7 @@ angular.module('vinifyApp')
 					function(cda){
 						$scope.WINES=cda;
 					},
-				// Failure
+					// Failure
 					function(error){
 						console.log(error);
 					});
@@ -16,7 +16,7 @@ angular.module('vinifyApp')
 					function(cda){
 						$scope.users=cda;
 					},
-				// Failure
+					// Failure
 					function(error){
 						console.log(error);
 					});
