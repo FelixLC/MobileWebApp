@@ -10,20 +10,20 @@
 			    <p>{{WINES[id].appellation}}</p>
 			  </div>
 
-			  <div class="item item-body">
-			    <form name="ratingform" ng-controller="WineRatingCtrl">
-			      <h3>Je note le vin sur 4 : <span class="badge badge-Rouge">{{B[0]}}</h3>
+			  <div class="item item-body" ng-controller="WineRatingCtrl">
+			    <form name="ratingform">
+			      <h3>Je note le vin sur 4 : <span class="badge badge-Rouge">{{B[1]}}</h3>
 				    <div class="range range-positive">
 					  <i class="fa fa-heart-o" id="minus"></i>
-					  	<input type="range" ng-name="rating" max="4" min="1" step="1" ng-model="B[0]">
+					  	<input type="range" ng-name="rating" max="4" min="1" step="1" ng-model="B[1]">
 					  <i class="fa fa-heart" id="max" scope="" onload=""></i>
 					</div>
 
 					<h3>Mon commentaire libre:</h3>
-					<input type="text" ng-name="commentaire" ng-model="B[1]">
+					<input type="text" ng-name="commentaire" placeholder="J'ai aimé ce vin car il équilibré, avec une pointe d'acidité intéressante"ng-model="B[2]">
 
 					<label class="checkbox">
-       					<input type="checkbox" ng-name="oneagain" ng-model="B[2]" id="check">
+       					<input type="checkbox" ng-name="oneagain" ng-model="B[3]" id="check">
        					J'aimerais revoir un jour ce vin dans mon Vinibar (cocher si oui)
      				</label>
 
