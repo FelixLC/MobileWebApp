@@ -59,7 +59,18 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       });
   })
 
-.controller('ModalCtrl', function($http, $scope, Modal, security) {
+.controller('ModalCtrl', function($http, $scope, Modal, security, $route, $location) {
+  $scope.$on('$routeChangeSuccess', function() {
+    var path = $location.path();
+    console.log(path);
+    $scope.pathisnotlogin = true;
+    if(path === '/login') {
+       $scope.pathisnotlogin = false;
+    } else {
+       $scope.pathisnotlogin = true;
+    }
+  });
+
   $scope.$watch(function() {
         return security.currentUser;
       }, function(currentUser) {

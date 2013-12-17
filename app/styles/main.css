@@ -167,3 +167,9 @@ border-color: #800000;
 #email{
     color: #800000;
 }
+
+/* ----- MODAL ----- */
+
+#pleaseconnect {
+  text-align: center;
+}
