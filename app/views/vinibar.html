@@ -1,26 +1,4 @@
-<!-- 
-  <div class="section">
-
-      <div ng-repeat="wine in WINES">
-        <div class="wine-info col-md-3 span4">
-          <a href="#/vinibar/wines/{{$index + 1}}">
-            <div class="wine-name">
-              <p class="linktoinfo">{{wine.domaine}}<br>
-              {{wine.appellation}} - {{wine.millesime}}</p>
-            </div>
-          </a>
-          <a href="#/vinibar/rating/{{$index + 1}}" class="linktorating">
-            <div class="wine-rating">
-              <p><span class="fui-new linktorating"></span><p>
-            </div>
-          </a>
-        </div>
-      </div>
-  </div>
-
-
- -->
- <nav-page title="mytitle" id="Vinify" right-buttons="rightButtons">
+ <nav-page title="mytitle" id="Vinify" right-buttons="rightButtons" hide-back-button="true">
    <content has-header="true" has-footer="true" overflow-scroll="true">
             <div class="list">
               <a ng-repeat="bottle in BOTTLES" class="item item-avatar" href="#/vinibar/wines/{{$index + 1}}">

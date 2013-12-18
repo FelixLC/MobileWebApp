@@ -133,9 +133,9 @@ border-color: #800000;
 }
 
 .button.button-positive {
-  border-color: #253544;
+  border-color: #2c3e50;
   color: #ffffff;
-  background-color: #253544;
+  background-color: #2c3e50;
 }
 
 #validatecontainer {
@@ -145,6 +145,17 @@ border-color: #800000;
 #check {
   margin-bottom: -8px;
 }
+
+.checkbox input:checked:before {
+  background: #2c3e50;
+}
+
+.checkbox input:before {
+  border-color: #2c3e50;
+}
+
+.range.range-positive input::-webkit-slider-thumb:before {
+  background: #2c3e50; }
 
 /* ----- ADMIN ----- */
 
@@ -172,4 +183,14 @@ border-color: #800000;
 
 #pleaseconnect {
   text-align: center;
+}
+
+#signout {
+  border-color: transparent;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.bar-light .button:hover, .bar-light .button:active , .bar-light .button:visited {
+color: #ffffff;
 }

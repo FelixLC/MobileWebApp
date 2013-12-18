@@ -100,7 +100,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   $scope.rightButtons = [
     { 
       type: 'button-positive',
-      content: '<i class="icon ion-navicon"></i>',
+      content: '<i class="fa fa-sign-out" id="signout"></i>',
       tap: function() {
         $scope.openModal();
       }

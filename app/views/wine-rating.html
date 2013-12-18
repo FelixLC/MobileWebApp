@@ -15,16 +15,16 @@
 			      <h3>La note que je donne à ce vin : <span class="badge badge-Rouge">{{B[1]}}/5</h3>
 				    <div class="range range-positive">
 					  <i class="fa fa-heart-o" id="minus"></i>
-					  	<input type="range" ng-name="rating" max="4" min="1" step="1" ng-model="B[1]">
+					  	<input type="range" ng-name="rating" max="5" min="1" step="1" ng-model="B[1]">
 					  <i class="fa fa-heart" id="max" scope="" onload=""></i>
 					</div>
 
 					<h3>Mon commentaire libre:</h3>
-					<input type="text" ng-name="commentaire" placeholder="J'ai aimé ce vin car il équilibré, avec une pointe d'acidité intéressante"ng-model="B[2]">
+					<input type="text" ng-name="commentaire" placeholder="J'ai aimé ce vin car ..."ng-model="B[2]">
 
 					<label class="checkbox">
        					<input type="checkbox" ng-name="oneagain" ng-model="B[3]" id="check">
-       					J'aimerais revoir un jour ce vin dans mon Vinibar (cocher si oui)
+       					J'aimerais revoir un jour ce vin dans mon Vinibar
      				</label>
 
 
