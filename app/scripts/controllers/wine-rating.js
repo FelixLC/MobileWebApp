@@ -28,7 +28,7 @@ angular.module('vinifyApp')
                         }); 
                       })
                       .error(function(data, status, headers, config){
-                          throw new Error('Salut les amis')
+                          alert('Merci de Mettre une note au vin grace à la barre de notation');
                         });
 
         return request;
