@@ -38,9 +38,8 @@ angular.module('vinifyApp')
             failure
             );
         }
-      }
-    },
-    getClientsOverview: function(success, failure) {
+      },
+      getClientsOverview: function(success, failure) {
         var that = this;
         if (that.overview) {
           success(that.overview);

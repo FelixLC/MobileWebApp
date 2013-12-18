@@ -4,6 +4,7 @@ angular.module('vinifyApp')
   .controller('WineRatingCtrl', function ($window, $http, $scope, $location, VinibarWines) {
     $scope.B=[];
     $scope.B[3]=true;
+    $scope.B[3]="";
 
     $scope.PostComment = function(){
 
@@ -22,16 +23,13 @@ angular.module('vinifyApp')
                       })
                       .success(function(data, status, headers, config) {
                         VinibarWines.updateWines(
-                          // Success
                           function(cda){
                             $location.path('/rated');
-                          }, 
-                          // Failure
-                          function(error){
-                            console.log(error);
-                          }); 
-                      });
-
+                        }); 
+                      })
+                      .error(function(data, status, headers, config){
+                          throw new Error('Salut les amis')
+                        });
 
         return request;
         }    

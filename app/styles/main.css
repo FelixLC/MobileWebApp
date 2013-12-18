@@ -9,6 +9,14 @@ body{
   background-color: #F9F9F9;
 }
 
+.alert-danger {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  text-align: center;
+  padding: 5px;
+}
+
 /*.tabs.tabs-global{
     background-color: #800000;
     background-image: linear-gradient(0deg, #111111, #111111 50%, transparent 50%);
