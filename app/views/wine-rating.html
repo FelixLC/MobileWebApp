@@ -12,7 +12,7 @@
 
 			  <div class="item item-body" ng-controller="WineRatingCtrl">
 			    <form name="ratingform">
-			      <h3>Je note le vin sur 4 : <span class="badge badge-Rouge">{{B[1]}}</h3>
+			      <h3>La note que je donne à ce vin : <span class="badge badge-Rouge">{{B[1]}}/5</h3>
 				    <div class="range range-positive">
 					  <i class="fa fa-heart-o" id="minus"></i>
 					  	<input type="range" ng-name="rating" max="4" min="1" step="1" ng-model="B[1]">
@@ -29,7 +29,7 @@
 
 
      				<div id="validatecontainer">
-					    <button class="button button-positive" ng-click="PostComment()">	Je note ce vin !
+					    <button class="button button-positive" ng-click="PostComment()">Je note ce vin !
 					    </button>
 	  				</div>
 

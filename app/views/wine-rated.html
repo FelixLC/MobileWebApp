@@ -1,8 +1,8 @@
  <nav-page title="mytitle" id="Vinify">
    <content has-header="true" has-footer="true" overflow-scroll="true">
             <div class="list card">
-              <a ng-repeat="rbottle in RBOTTLES" class="item item-icon-left" href="#/vinibar/rated/{{$index + 1}}">
-                <i class="icon ion-wineglass"></i>
+              <a ng-repeat="rbottle in RBOTTLES" class="item item-avatar" href="#/vinibar/rated/{{$index + 1}}">
+                <img src="images/heart-{{rbottle.rating}}.svg" class="iconbottle">
                 <h3>{{rbottle.wine.display_name}}<span class="badge badge-{{rbottle.wine.couleur}}">{{rbottle.rating}}</span></h3>
                 <p>{{rbottle.wine.region}} </p>
 

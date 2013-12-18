@@ -106,12 +106,6 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       }
     }
   ];
-  // Test data
-  $scope.contacts = [
-    { name: 'Gordon Freeman' },
-    { name: 'Barney Calhoun' },
-    { name: 'Lamarr the Headcrab' }
-  ];
 
   $scope.logout = function() {
       $scope.modal.hide();

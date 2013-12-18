@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('vinifyApp')
-  .controller('WineRatingCtrl', function ($http, $scope) {
+  .controller('WineRatingCtrl', function ($window, $http, $scope, $route, $location) {
     $scope.B=[];
     $scope.B[3]=true;
 
@@ -19,7 +19,14 @@ angular.module('vinifyApp')
                               headers: {
                                        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
                               }
+                      })
+                      .success(function(data, status, headers, config) {
+                        $window.location.reload();  
+                        $location.path('/rated');
+                        
                       });
+
+
         return request;
         }    
   });

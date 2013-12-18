@@ -5,7 +5,7 @@ angular.module('security.service', [
   'ui.bootstrap.dialog'     // Used to display the login form as a modal dialog.
 ])
 
-.factory('security', ['$http', '$q', '$location', 'securityRetryQueue', '$dialog', function($http, $q, $location, queue, $dialog) {
+.factory('security', ['$route', '$http', '$q', '$location', 'securityRetryQueue', '$dialog', function($route, $http, $q, $location, queue, $dialog) {
 
   // Redirect to the given url (defaults to '/')
   function redirect(url) {
@@ -89,6 +89,7 @@ angular.module('security.service', [
       $http.post('/logout/').then(function() {
         service.currentUser = null;
         redirect(redirectTo);
+        $route.reload();
       });
     },
 
