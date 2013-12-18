@@ -89,7 +89,6 @@ angular.module('security.service', [
       $http.post('/logout/').then(function() {
         service.currentUser = null;
         redirect(redirectTo);
-        $route.reload();
       });
     },
 

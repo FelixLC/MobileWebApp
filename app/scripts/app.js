@@ -63,7 +63,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       });
   })
 
-.controller('ModalCtrl', function($http, $scope, Modal, security, $route, $location) {
+.controller('ModalCtrl', function($http, $scope, Modal, security, VinibarWines, $route, $location) {
   $scope.mytitle='Vinify'
   $scope.$on('$routeChangeSuccess', function() {
     var path = $location.path();
@@ -108,8 +108,10 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
   ];
 
   $scope.logout = function() {
-      $scope.modal.hide();
-      security.logout('/login');
+    VinibarWines.wines = null;
+    VinibarWines.ratedwines= null;
+    $scope.modal.hide();
+    security.logout('/login');
     };
   $scope.openModal = function() {
     $scope.modal.show();

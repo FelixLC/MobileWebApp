@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('vinifyApp')
-  .controller('WineRatingCtrl', function ($window, $http, $scope, $route, $location) {
+  .controller('WineRatingCtrl', function ($window, $http, $scope, $location, VinibarWines) {
     $scope.B=[];
     $scope.B[3]=true;
 
@@ -21,9 +21,15 @@ angular.module('vinifyApp')
                               }
                       })
                       .success(function(data, status, headers, config) {
-                        $window.location.reload();  
-                        $location.path('/rated');
-                        
+                        VinibarWines.updateWines(
+                          // Success
+                          function(cda){
+                            $location.path('/rated');
+                          }, 
+                          // Failure
+                          function(error){
+                            console.log(error);
+                          }); 
                       });
 
 
