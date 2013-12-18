@@ -4,10 +4,9 @@
 
 		<div class="list card">
 
-			  <div class="item item-avatar">
-			  <img src="images/castle.svg">
-			    <h2>{{BOTTLES[id].wine.display_name}}</h2>
-			    <p>{{BOTTLES[id].wine.region}}</p>
+			  <div class="item">
+			    <h2>{{BOTTLES[id].wine.display_name}}<span class="badge badge-{{BOTTLES[id].wine.couleur}}">{{BOTTLES[id].wine.millesime}}</span></h2>
+			    <p>{{BOTTLES[id].wine.region}}<span class="item-note">{{BOTTLES[id].wine.cepage}}</span></p>
 			  </div>
 
 			  <div class="item item-body" ng-controller="WineRatingCtrl">
@@ -24,7 +23,7 @@
 
 					<label class="checkbox">
        					<input type="checkbox" ng-name="oneagain" ng-model="B[3]" id="check">
-       					J'aimerais revoir un jour ce vin dans mon Vinibar
+       					J'aimerais le revoir dans mon Vinibar
      				</label>
 
 

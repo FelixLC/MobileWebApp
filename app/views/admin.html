@@ -1,8 +1,14 @@
 <nav-page title="mytitle" id="Vinify">
 
    <content has-header="true" has-footer="true" overflow-scroll="true">
+    <div class="row">
+         <h3>Action </h3>
+        <select ng-model="action" ng-name="action" ng-options="action for action in actionlist">
+        </select>
+       </div>
      <div id="AdminFormContainer">
-        <form name="PostData">
+
+        <form name="PostVinibar" ng-show="action == 'PostVinibar'">
 
           <div class="row">
             <div class="col">
@@ -21,6 +27,93 @@
 
             <div class="col">
                 <button class="button button-positive" id="PostVinibar" ng-click="PostWines()">Create Vinibar</button>
+            </div>
+
+          </div>
+        </form>
+
+        <form name="PostVinibar" ng-show="action == 'PostRefill'">
+
+          <div class="row">
+            <div class="col">
+              <h4>Username</h4>
+                <select ng-model="B[0]" ng-name="username" ng-options="user.email as user.email for user in users | orderBy:'email'">
+                </select>
+            </div>
+
+            <div class="col">
+                <div ng-repeat="number in winerefillnumber">
+                  <h4>{{number}}</h4>
+                    <select ng-model="B[$index+1]" ng-name="B[$index+1]" ng-options="item.id as item.display_name for item in WINES | orderBy:'display_name'">
+                    </select>
+                </div>
+            </div>
+
+            <div class="col">
+                <button class="button button-positive" id="PostVinibar" ng-click="PostRefill()">Post Refill</button>
+            </div>
+
+          </div>
+        </form>
+
+        <form name="PostVinibar" ng-show="action == 'PostBottle'">
+
+          <div class="row">
+            <div class="col">
+              <h4>Username</h4>
+                <select ng-model="C[0]" ng-name="username" ng-options="user.email as user.email for user in users | orderBy:'email'">
+                </select>
+            </div>
+
+            <div class="col">
+                <div ng-repeat="number in winebottlenumber">
+                  <h4>{{number}}</h4>
+                    <select ng-model="C[$index+1]" ng-name="C[$index+1]" ng-options="item.id as item.display_name for item in WINES | orderBy:'display_name'">
+                    </select>
+                </div>
+            </div>
+
+            <div class="col">
+                <button class="button button-positive" id="PostVinibar" ng-click="PostBottle()">Post Bottle</button>
+            </div>
+
+          </div>
+        </form>
+
+        <form name="PostVinibar" ng-show="action == 'PopulateWines'">
+
+          <div class="row">
+            <div class="col">
+              <h4>Wine</h4>
+                <select ng-model="D[0]" ng-name="winename" ng-options="item.id as item.display_name for item in WINES | orderBy:'display_name'">
+                </select>
+            </div>
+
+            <div class="col">
+                  <h4>Description</h4>
+                    <input ng-model="D[1]" ng-name="description">
+                    </select>
+            </div>
+
+            <div class="col">
+                  <h4>Dégustation</h4>
+                    <input ng-model="D[2]" ng-name="degust">
+                    </select>
+            </div>
+
+            <div class="col">
+              <h4>Température</h4>
+                <select ng-model="D[3]" ng-name="temp" ng-options="item for item in temps">
+                </select>
+            </div>
+
+            <div class="col">
+              <h4>Carafage</h4>
+                <input ng-model="D[4]" ng-name="caraf" type="checkbox">
+            </div>
+
+            <div class="col">
+                <button class="button button-positive" id="PostVinibar" ng-click="PopulateWines()">PopulateWine</button>
             </div>
 
           </div>

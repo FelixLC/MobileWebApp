@@ -6,6 +6,17 @@
 				<p>{{BOTTLES[id].wine.region}} <span class="item-note">{{BOTTLES[id].wine.cepage}}</span> </p>
 			</div>
 
+			<div class="item tabs tabs-secondary tabs-icon-left">
+				<a class="tab-item noter" href="#/vinibar/rating/{{id + 1}}">
+				  <i class="icon ion-chatbox"></i>
+				  Noter ce vin
+				</a>
+				<a class="tab-item" href="mailto:antoine@vinify.co?subject=Commande%20de%20{{BOTTLES[id].wine.display_name}}&body=Bonjour%2C%0AJe%20voudrais%20effectuer%20une%20commande%20de%20vin.%0A%0AR%C3%A9f%C3%A9rence%3A%20{{BOTTLES[id].wine.display_name}},%20{{BOTTLES[id].wine.region}},%20{{BOTTLES[id].wine.millesime}}%0ANombre%20de%20caisses%3A%20%5BX%5D%0A%0AMerci%20de%20m'indiquer%20la%20disponibilit%C3%A9.%0A%0ACordialement%2C%0A">
+				  <i class="icon ion-share"></i>
+				  Commander
+				</a>
+		  	</div>
+
 			<div class="item item-divider">
 				Description
 			</div>
@@ -24,16 +35,7 @@
 				{{BOTTLES[id].wine.food}}
 		  	</div>
 
-		  <div class="item tabs tabs-secondary tabs-icon-left">
-			<a class="tab-item noter" href="#/vinibar/rating/{{id + 1}}">
-			  <i class="icon ion-chatbox"></i>
-			  Noter ce vin
-			</a>
-			<a class="tab-item" href="mailto:antoine@vinify.co?subject=Commande%20de%20{{BOTTLES[id].wine.display_name}}&body=Bonjour%2C%0AJe%20voudrais%20effectuer%20une%20commande%20de%20vin.%0A%0AR%C3%A9f%C3%A9rence%3A%20{{BOTTLES[id].wine.display_name}},%20{{BOTTLES[id].wine.region}},%20{{BOTTLES[id].wine.millesime}}%0ANombre%20de%20caisses%3A%20%5BX%5D%0A%0AMerci%20de%20m'indiquer%20la%20disponibilit%C3%A9.%0A%0ACordialement%2C%0A">
-			  <i class="icon ion-share"></i>
-			  Commander
-			</a>
-		  </div>
+		  
 		</div>
 	</content>
 </nav-page>

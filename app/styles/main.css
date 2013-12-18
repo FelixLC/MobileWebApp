@@ -64,9 +64,9 @@ border-color: #800000;
   color: #2C3E50;
 }
 
-.noter{
+/*.noter{
   color: #800000;
-}
+}*/
 
 .commander{
   color: #2C3E50;
@@ -140,6 +140,7 @@ border-color: #800000;
 
 #validatecontainer {
   text-align: center;
+  padding-top: 20px;
 }
 
 #check {

@@ -1,10 +1,4 @@
-Header = vinify + logo slide left {logout + adresse}
-wine-info = Bouton en savoir plus (Description + Notation + degustation)
-Tab bar logo bleus 
-Thermomètres et Carafes rouge 
-Noter le vin garder list avatar badges
-Range color
-Mettre la note à gauche (coeur qui se remplit)
+
 Noté il y a N jours
 
 Refresh: logout login ratewine
