@@ -8,6 +8,7 @@ angular.module('vinifyApp')
     return {
       users: null,
       allwines: null,
+      overview: null,
       getUsers: function(success, failure) {
         var that = this;
         if (that.users) {
@@ -33,6 +34,22 @@ angular.module('vinifyApp')
             function(abc){
               that.allwines = abc;
               success(that.allwines);
+            }, 
+            failure
+            );
+        }
+      }
+    },
+    getClientsOverview: function(success, failure) {
+        var that = this;
+        if (that.overview) {
+          success(that.overview);
+        }
+        else {
+          $resource('/clientsoverview/').query(
+            function(abc){
+              that.overview = abc;
+              success(that.overview);
             }, 
             failure
             );

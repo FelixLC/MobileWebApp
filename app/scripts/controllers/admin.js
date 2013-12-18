@@ -20,12 +20,21 @@ angular.module('vinifyApp')
 					function(error){
 						console.log(error);
 					});
+				VinibarUsers.getClientsOverview(
+					// Success
+					function(cda){
+						$scope.clientsoverview=cda;
+					},
+					// Failure
+					function(error){
+						console.log(error);
+					});
 
 				$scope.A = [];
 				$scope.B = [];
 				$scope.C = [];
 				$scope.D = [];
-				$scope.actionlist = ['PostVinibar', 'PostRefill', 'PostBottle', 'PopulateWines'];
+				$scope.actionlist = ['PostVinibar', 'PostRefill', 'PostBottle', 'PopulateWines', 'ClientsOverview'];
 				$scope.winenumber = ['wine1', 'wine2', 'wine3', 'wine4', 'wine5', 'wine6', 'wine7', 'wine8', 'wine9'];
 				$scope.winerefillnumber = ['wine1', 'wine2', 'wine3'];
 				$scope.winebottlenumber = ['wine1'];

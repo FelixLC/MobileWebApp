@@ -119,6 +119,25 @@
           </div>
         </form>
 
+        <div ng-show="action == 'ClientsOverview'">
+
+          <div class="row">
+            <div class="col">
+              <h4>Client</h4>
+                <select ng-name="username" ng-model="client" ng-options="client.username for client in clientsoverview | orderBy:'id'">
+                </select>
+            </div>
+
+            <div class="col">
+                <h4>
+                  Le Client {{client.username}} à noté {{client.rating_count}} bouteilles et a {{client.bottle_count}} dans son Vinibar.
+                </h4>
+            </div>
+
+
+          </div>
+        </div>
+
       </div>
           
   </content>
