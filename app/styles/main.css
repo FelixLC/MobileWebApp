@@ -66,6 +66,21 @@ box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15);
 border-color: #800000;
 }
 
+.button.button-positive.button-outline {
+  border-color: #2C3E50;
+  color: #2C3E50;
+}
+
+.button.button-positive.button-outline:active {
+  background-color: #2C3E50;
+  color: #ffffff;
+}
+
+.cgpwd {
+  text-align: right;
+  margin: 10px;
+}
+
 /* ----- RATING ----- */
 
 .fa-star, .fa-star-o {
@@ -117,6 +132,10 @@ border-color: #800000;
 .badge.badge-Blanc {
     background-color: #f1c40f;
     color: white; }
+
+.badge.badge-Bleu {
+    border-color: white;
+    color: #2C3E50; }
 
 .bar.bar-light {
     background-color: #2c3e50;
@@ -188,8 +207,6 @@ border-color: #800000;
     color: #800000;
 }
 
-/* ----- MODAL ----- */
-
 #pleaseconnect {
   text-align: center;
 }
@@ -203,3 +220,11 @@ border-color: #800000;
 .bar-light .button:hover, .bar-light .button:active , .bar-light .button:visited {
 color: #ffffff;
 }
+
+
+/* ----- WINEINFO ----- */
+
+  .cepage{
+    float: left;
+  }
+

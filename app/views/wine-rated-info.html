@@ -1,17 +1,23 @@
  <nav-page title="mytitle">
 	<content has-header="true" has-footer="true">
 	 	<div class="list card">
-		  	<div class="item">
-			    <h2>{{RBOTTLES[id].wine.display_name}}<span class="badge badge-{{RBOTTLES[id].wine.couleur}}">{{RBOTTLES[id].rating}}/5</span></h2>
-			    <p>{{RBOTTLES[id].wine.region}} <span class="item-note">{{RBOTTLES[id].wine.cepage}}</span> </p>
-		  	</div>
-
+	 		<div class="item">
+				<h2>{{RBOTTLES[id].wine.display_name}}</h2>
+				<p>
+					<span class="badge badge-{{RBOTTLES[id].wine.couleur}}">{{RBOTTLES[id].wine.cepage}}</span> {{RBOTTLES[id].wine.millesime}}
+				</p>
+				<p>
+					{{RBOTTLES[id].wine.region}} {{RBOTTLES[id].wine.appelation}}
+				</p>
+			</div>
+		  	
 		  	<div class="item item-divider">
 		    	Mon commentaire de dégustation
 			</div>
 
 		  	<div class="item item-body">
-		      {{RBOTTLES[id].comment}}
+		  		<p>Note: <span class="badge badge-Bleu">{{RBOTTLES[id].rating}}/5</span></p>
+		     	<p>{{RBOTTLES[id].comment}}</p>
 		  	</div>
 
 		  	<div class="item item-divider">

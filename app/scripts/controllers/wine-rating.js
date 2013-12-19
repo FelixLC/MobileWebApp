@@ -8,6 +8,7 @@ angular.module('vinifyApp')
 
     $scope.PostComment = function(){
 
+
         var dataset = 'wine=' + $scope.BOTTLES[$scope.id].wine.id
                       + '&rating=' + $scope.B[1]
                       + '&comment=' + $scope.B[2]

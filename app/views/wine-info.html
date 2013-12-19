@@ -2,8 +2,13 @@
 	<content has-header="true" has-footer="true">
 		 <div class="list card">
 			<div class="item">
-				<h2>{{BOTTLES[id].wine.display_name}}<span class="badge badge-{{BOTTLES[id].wine.couleur}}">{{BOTTLES[id].wine.millesime}}</span></h2>
-				<p>{{BOTTLES[id].wine.region}} <span class="item-note">{{BOTTLES[id].wine.cepage}}</span> </p>
+				<h2>{{BOTTLES[id].wine.display_name}}</h2>
+				<p>
+					<span class="badge badge-{{BOTTLES[id].wine.couleur}}">{{BOTTLES[id].wine.cepage}}</span> {{BOTTLES[id].wine.millesime}}
+				</p>
+				<p>
+					{{BOTTLES[id].wine.region}} {{BOTTLES[id].wine.appelation}}
+				</p>
 			</div>
 
 			<div class="item tabs tabs-secondary tabs-icon-left">

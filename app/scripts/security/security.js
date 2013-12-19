@@ -112,6 +112,26 @@ angular.module('security.service', [
       }
     },
 
+    checkAdmin: function() {
+      if ( service.isAdmin() ) {
+        return $q.when(service.currentUser);
+      } else {
+        return $http.get('/isadmin/').then(
+          //Success: set currentUser
+          function(response) {
+            service.currentUser = response.data.email;
+            service.currentUser.admin = response.data.email;
+            service.currentUserData = response.data;
+            return service.currentUser;
+          },
+          //Error: Reroute User to login
+          function(){
+            $location.path('/login');
+          }
+        );
+      }
+    },
+
     // Information about the current user
     currentUser: null,
     currentUserData: null,

@@ -54,9 +54,9 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
         templateUrl: 'scripts/security/login/form.tpl.html',
         controller: 'LoginFormController'
       })
-      .when('/admin', {
+      .when('/petrus82pommard72', {
         templateUrl: 'views/admin.html',
-        controller: 'AdminController'
+        controller: 'AdminController',
       })
       .otherwise({
         redirectTo: '/'
@@ -106,6 +106,32 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       }
     }
   ];
+
+  $scope.user= {};
+  $scope.changepwd = false;
+
+  $scope.changepassword = function(){
+
+
+        var dataset = 'current_password' + $scope.user.mdp1
+                      + '&new_password=' + $scope.user.mdp2;
+          
+        var request = $http({
+                              url: '/changepassword/',
+                              method: "POST",
+                              data: dataset,
+                              headers: {
+                                       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+                              }
+                      })
+                      .success(function(data, status, headers, config) {
+                            $scope.modal.hide();
+                            security.logout('/login');
+                      });
+
+        return request;
+        };
+
 
   $scope.logout = function() {
     VinibarWines.wines = null;

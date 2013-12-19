@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('vinifyApp')
-			.controller('AdminController', function($http, $scope, VinibarUsers){
+			.controller('AdminController', function($http, $scope, VinibarUsers, security){
 				VinibarUsers.getAllWines(
 					// Success
 					function(cda){
