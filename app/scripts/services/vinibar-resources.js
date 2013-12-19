@@ -36,6 +36,7 @@ angular.module('vinifyApp')
 						);
 				}
 			},
+
 			updateWines: function(success, failure) {
 				var that = this;
 				$resource('/ratedlist/').query(
@@ -53,6 +54,7 @@ angular.module('vinifyApp')
 					failure
 					);
 			},
+			
 			resetWines: function () {
 				this.wines = null;
 				this.ratedwines = null;

@@ -8,7 +8,6 @@ angular.module('vinifyApp')
 
     $scope.PostComment = function(){
 
-
         var dataset = 'wine=' + $scope.BOTTLES[$scope.id].wine.id
                       + '&rating=' + $scope.B[1]
                       + '&comment=' + $scope.B[2]
@@ -23,14 +22,16 @@ angular.module('vinifyApp')
                               }
                       })
                       .success(function(data, status, headers, config) {
-                        VinibarWines.updateWines(
-                          function(cda){
-                            $location.path('/rated');
-                        }); 
-                      })
-                      .error(function(data, status, headers, config){
-                          alert('Merci de Mettre une note au vin grace à la barre de notation');
-                        });
+                          VinibarWines.updateWines(
+                           // Success
+                            function(cda){
+                              $location.path('/rated');
+                          }, 
+                          // Failure
+                          function(error){
+                            console.log(error);
+                          }); 
+                      });
 
         return request;
         }    
