@@ -56,7 +56,7 @@ angular.module('vinifyApp', ['ionic', 'ngAnimate',
       })
       .when('/petrus82pommard72', {
         templateUrl: 'views/admin.html',
-        controller: 'AdminController',
+        controller: 'AdminController'
       })
       .otherwise({
         redirectTo: '/'
