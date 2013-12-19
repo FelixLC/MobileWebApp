@@ -4,7 +4,7 @@ angular.module('vinifyApp')
   .controller('WineRatingCtrl', function ($window, $http, $scope, $location, VinibarWines) {
     $scope.B=[];
     $scope.B[3]=true;
-    $scope.B[3]="";
+    $scope.B[2]="";
 
     $scope.PostComment = function(){
 

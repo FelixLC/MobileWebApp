@@ -1,10 +1,6 @@
 <nav-page title="mytitle">
 	<content has-header="true" has-footer="true" scroll="true"  ng-controller="WineRatingCtrl">
 
-	<div class="card alert-danger" ng-show="{{erreur}}">
-		{{message}}
-	</div>
-
 		<div class="list card">
 
 			  <div class="item">
@@ -26,7 +22,7 @@
 
 					<label class="checkbox">
        					<input type="checkbox" ng-name="oneagain" ng-model="B[3]" id="check">
-       					J'aimerais le revoir dans mon Vinibar
+       					<span id="checkme">J'aimerais revoir ce vin dans mon Vinibar</span>
      				</label>
 
 
