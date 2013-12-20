@@ -15,7 +15,7 @@ angular.module('vinifyApp')
           success(that.users);
         }
         else {
-          $resource('/users/').query(
+          $resource('djangorestadminusers/').query(
             function(abc){
               that.users = abc;
               success(that.users);
@@ -30,7 +30,7 @@ angular.module('vinifyApp')
           success(that.allwines);
         }
         else {
-          $resource('/wines/').query(
+          $resource('djangorestadminwines/').query(
             function(abc){
               that.allwines = abc;
               success(that.allwines);
