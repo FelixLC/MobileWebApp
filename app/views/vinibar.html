@@ -2,7 +2,7 @@
    <content has-header="true" has-footer="true" overflow-scroll="true">
             <div class="list">
               <a ng-repeat="bottle in BOTTLES" class="item item-avatar" href="#/vinibar/wines/{{$index + 1}}">
-                <img src="images/bottle-{{bottle.wine.couleur}}.svg" class="iconbottle">
+                <img src="images/bottle-{{bottle.wine.couleur | characters:3 :true}}.svg" class="iconbottle">
                 <h3>{{bottle.wine.display_name}}</h3>
                 <p>{{bottle.wine.region}} <span class="item-note">{{bottle.wine.millesime}}</span></p>
 
