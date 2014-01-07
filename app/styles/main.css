@@ -125,6 +125,10 @@ border-color: #800000;
 
 /* ----- VINIBAR ----- */
 
+.justified {
+  text-align: justify;
+}
+
 .badge.badge-Rouge {
     background-color: #c0392b;
     color: white; }

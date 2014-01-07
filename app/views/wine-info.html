@@ -1,4 +1,4 @@
- <nav-page title="mytitle">
+<nav-page title="mytitle">
 	<content has-header="true" has-footer="true">
 		 <div class="list card">
 			<div class="item">
@@ -27,17 +27,16 @@
 			</div>
 
 		  	<div class="item item-body">
-			  {{BOTTLES[id].wine.description}}
+			  <p ng-bind-html-unsafe="BOTTLES[id].wine.description" class="justified"><p>
 		  	</div>
 
 		  	<div class="item item-divider">
-				Service
+				Service et dégustation
 			</div>
 
 		  	<div class="item item-body">
-			  <i class="icon ion-thermometer"></i> °C {{BOTTLES[id].wine.temp}}<br><br>
-			  Suggestion de dégustation <br>
-				{{BOTTLES[id].wine.food}}
+			  	<i class="icon ion-thermometer"></i>°  {{BOTTLES[id].wine.temperature}} <br><span ng-show="BOTTLES[id].wine.carafage"> Mettre en carafe une heure avant le service de préférence. <br></span><br>
+				<p ng-bind-html-unsafe="BOTTLES[id].wine.degustation" class="justified"><p>
 		  	</div>
 
 		  
