@@ -29,12 +29,30 @@ angular.module('vinifyApp')
 					function(error){
 						console.log(error);
 					});
+				VinibarUsers.getWineRatings(
+					// Success
+					function(cda){
+						$scope.wineratings=cda;
+					},
+					// Failure
+					function(error){
+						console.log(error);
+					});
+				VinibarUsers.getUserRatings(
+					// Success
+					function(cda){
+						$scope.userratings=cda;
+					},
+					// Failure
+					function(error){
+						console.log(error);
+					});
 
 				$scope.A = [];
 				$scope.B = [];
 				$scope.C = [];
 				$scope.D = [];
-				$scope.actionlist = ['PostVinibar', 'PostRefill', 'PostBottle', 'PopulateWines', 'ClientsOverview'];
+				$scope.actionlist = ['PostVinibar', 'PostRefill', 'PostBottle', 'PopulateWines', 'ClientsOverview', 'WineRatings', 'UserRatings'];
 				$scope.winenumber = ['wine1', 'wine2', 'wine3', 'wine4', 'wine5', 'wine6', 'wine7', 'wine8', 'wine9'];
 				$scope.winerefillnumber = ['wine1', 'wine2', 'wine3'];
 				$scope.winebottlenumber = ['wine1'];
@@ -103,7 +121,35 @@ angular.module('vinifyApp')
 											+ '&caraf=' + $scope.D[4];
 
 					var request = $http({
-													url: '/populatewines/',
+													url: '/populatewine/',
+													method: 'POST',
+													data: dataset,
+													headers: {
+														'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+													}
+												});
+				return request;
+				};
+
+				$scope.GetUserRatings = function(){
+					var dataset = 'username=' + $scope.theuser;
+
+					var request = $http({
+													url: '/userratings/',
+													method: 'POST',
+													data: dataset,
+													headers: {
+														'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+													}
+												});
+				return request;
+				};
+
+				$scope.GetWineRatings = function(){
+					var dataset = 'wine=' + $scope.thewine;
+
+					var request = $http({
+													url: '/wineratings/',
 													method: 'POST',
 													data: dataset,
 													headers: {

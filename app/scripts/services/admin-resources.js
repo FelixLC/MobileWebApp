@@ -9,6 +9,8 @@ angular.module('vinifyApp')
       users: null,
       allwines: null,
       overview: null,
+      wineratings: null,
+      userratings: null,
       getUsers: function(success, failure) {
         var that = this;
         if (that.users) {

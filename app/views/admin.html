@@ -159,6 +159,73 @@
           </div>
         </div>
 
+        <div ng-show="action == 'UserRatings'">
+
+          <div class="row">
+            <div class="col">
+              <h4>Username</h4>
+                <select ng-model="theuser" ng-name="username" ng-options="user.email as user.email for user in users | orderBy:'email'">
+                </select>
+            </div>
+          
+
+
+            <table class="table table-striped table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th class="id">Id&nbsp;</th>
+                        <th class="user">User&nbsp;</th>
+                        <th class="name">Rated Bottles&nbsp;</th>
+                        <th class="description">Bottles Left&nbsp;</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="client in clientsoverview | orderBy:name">
+                        <td>{{client.id}}&nbsp;&nbsp;</td>
+                        <td>{{client.username}}&nbsp;&nbsp;</td>
+                        <td>{{client.rating_count}}&nbsp;&nbsp;</td>
+                        <td>{{client.bottle_count}}&nbsp;&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+          </div>
+        </div>
+
+        <div ng-show="action == 'WineRatings'">
+
+          <div class="row">
+            <div class="col">
+              <h4>Wine</h4>
+                <select ng-model="thewine" ng-name="wine" ng-options="wine.id as wine.display_name for wine in WINES | orderBy:'display_name'">
+                </select>
+            </div>
+
+          
+
+
+            <table class="table table-striped table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th class="id">Id&nbsp;</th>
+                        <th class="user">User&nbsp;</th>
+                        <th class="name">Rated Bottles&nbsp;</th>
+                        <th class="description">Bottles Left&nbsp;</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="client in clientsoverview | orderBy:name">
+                        <td>{{client.id}}&nbsp;&nbsp;</td>
+                        <td>{{client.username}}&nbsp;&nbsp;</td>
+                        <td>{{client.rating_count}}&nbsp;&nbsp;</td>
+                        <td>{{client.bottle_count}}&nbsp;&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+
+          </div>
+        </div>
+
       </div>
           
   </content>
