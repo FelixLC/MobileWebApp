@@ -12,4 +12,25 @@ angular.module('vinifyApp')
 					function(error){
 						console.log(error);
 			});
+
+			$scope.carafagewhite = function(wine){
+				var result = false;
+				if (wine.carafage && wine couleur === 'Blanc')
+					result = true;
+				return result;
+			};
+
+			$scope.carafagelightred = function(wine){
+				var result = false;
+				if (!wine.carafage && wine couleur === 'Rouge')
+					result = true;
+				return result;
+			};
+
+			$scope.carafagestrongred = function(wine){
+				var result = false;
+				if (wine.carafage && wine couleur === 'Rouge')
+					result = true;
+				return result;
+			};
 		});

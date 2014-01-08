@@ -35,7 +35,10 @@
 			</div>
 
 		  	<div class="item item-body">
-			  	<i class="icon ion-thermometer"></i>°  {{BOTTLES[id].wine.temperature}}<br><p ng-show="BOTTLES[id].wine.carafage"> Mettre en carafe une heure avant le service de préférence. <br></p>
+			  	<i class="icon ion-thermometer"></i>°  <p>{{BOTTLES[id].wine.temperature}}</p>
+			  	<p ng-show="carafagewhite(BOTLLES[id].wine)"> Mettre en carafe une demi-heure avant le service de préférence.</p>
+			  	<p ng-show="carafagelightred(BOTLLES[id].wine)"> Mettre en carafe une heure avant le service de préférence.</p>
+			  	<p ng-show="carafagestrongred(BOTLLES[id].wine)"> Mettre en carafe deux heure avant le service de préférence.</p>
 				<p ng-bind-html="BOTTLES[id].wine.degustation" class="justified"><p>
 		  	</div>
 
