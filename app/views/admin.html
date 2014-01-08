@@ -161,69 +161,72 @@
 
         <div ng-show="action == 'UserRatings'">
 
-          <div class="row">
+            <div class="row">
+                <div class="col">
+                  <h4>Username</h4>
+                    <select ng-model="E[0]" ng-name="username" ng-options="user.email as user.email for user in users | orderBy:'email'">
+                    </select>
+                </div>
+            </div>
+
             <div class="col">
-              <h4>Username</h4>
-                <select ng-model="theuser" ng-name="username" ng-options="user.email as user.email for user in users | orderBy:'email'">
-                </select>
+                <button class="button button-positive" id="PostVinibar" ng-click="GetUserRatings()">Show Ratings</button>
             </div>
           
+            <div class="row">
+                <table class="table table-striped table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="wine">Wine&nbsp;&nbsp;</th>
+                            <th class="id">Rating&nbsp;&nbsp;</th>
+                            <th class="get">GetMore&nbsp;&nbsp;</th>
+                            <th class="user">Commentaire&nbsp;&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="bottle in G">
+                            <td>{{bottle.wine.display_name}}&nbsp;&nbsp;</td>
+                            <td>{{bottle.rating}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>{{bottle.get_more}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td>{{bottle.comment}}&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-
-            <table class="table table-striped table-condensed table-hover">
-                <thead>
-                    <tr>
-                        <th class="id">Id&nbsp;</th>
-                        <th class="user">User&nbsp;</th>
-                        <th class="name">Rated Bottles&nbsp;</th>
-                        <th class="description">Bottles Left&nbsp;</a></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="client in clientsoverview | orderBy:name">
-                        <td>{{client.id}}&nbsp;&nbsp;</td>
-                        <td>{{client.username}}&nbsp;&nbsp;</td>
-                        <td>{{client.rating_count}}&nbsp;&nbsp;</td>
-                        <td>{{client.bottle_count}}&nbsp;&nbsp;</td>
-                    </tr>
-                </tbody>
-            </table>
-
-          </div>
+            </div>
         </div>
 
         <div ng-show="action == 'WineRatings'">
 
-          <div class="row">
-            <div class="col">
-              <h4>Wine</h4>
-                <select ng-model="thewine" ng-name="wine" ng-options="wine.id as wine.display_name for wine in WINES | orderBy:'display_name'">
-                </select>
+            <div class="row">
+                <div class="col">
+                  <h4>Wine</h4>
+                    <select ng-model="F[0]" ng-name="wine" ng-options="wine.id as wine.display_name for wine in WINES | orderBy:'display_name'">
+                    </select>
+                </div>
+
+                <div class="col">
+                    <button class="button button-positive" id="PostVinibar" ng-click="GetWineRatings()">Show Ratings</button>
+                </div>
             </div>
 
-          
+            <div class="row">
+                <table class="table table-striped table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="id">Rating&nbsp;&nbsp;</th>
+                            <th class="user">Commentaire&nbsp;&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="bottle in H">
+                            <td>{{bottle.rating}}&nbsp;&nbsp;</td>
+                            <td>{{bottle.comment}}&nbsp;&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-
-            <table class="table table-striped table-condensed table-hover">
-                <thead>
-                    <tr>
-                        <th class="id">Id&nbsp;</th>
-                        <th class="user">User&nbsp;</th>
-                        <th class="name">Rated Bottles&nbsp;</th>
-                        <th class="description">Bottles Left&nbsp;</a></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="client in clientsoverview | orderBy:name">
-                        <td>{{client.id}}&nbsp;&nbsp;</td>
-                        <td>{{client.username}}&nbsp;&nbsp;</td>
-                        <td>{{client.rating_count}}&nbsp;&nbsp;</td>
-                        <td>{{client.bottle_count}}&nbsp;&nbsp;</td>
-                    </tr>
-                </tbody>
-            </table>
-
-          </div>
+            </div>
         </div>
 
       </div>

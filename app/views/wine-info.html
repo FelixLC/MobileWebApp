@@ -27,7 +27,7 @@
 			</div>
 
 		  	<div class="item item-body">
-			  <p ng-bind-html-unsafe="BOTTLES[id].wine.description" class="justified"><p>
+			  <p ng-bind-html="BOTTLES[id].wine.description" class="justified"><p>
 		  	</div>
 
 		  	<div class="item item-divider">
@@ -35,8 +35,8 @@
 			</div>
 
 		  	<div class="item item-body">
-			  	<i class="icon ion-thermometer"></i>°  {{BOTTLES[id].wine.temperature}} <br><p ng-show="BOTTLES[id].wine.carafage"> Mettre en carafe une heure avant le service de préférence. <br></p><br>
-				<p ng-bind-html-unsafe="BOTTLES[id].wine.degustation" class="justified"><p>
+			  	<i class="icon ion-thermometer"></i>°  {{BOTTLES[id].wine.temperature}} °C <br><p ng-show="BOTTLES[id].wine.carafage"> Mettre en carafe une heure avant le service de préférence. <br></p>
+				<p ng-bind-html="BOTTLES[id].wine.degustation" class="justified"><p>
 		  	</div>
 
 		  
