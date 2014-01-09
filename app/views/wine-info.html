@@ -20,27 +20,41 @@
 				  <i class="icon ion-share"></i>
 				  Commander
 				</a>
-		  	</div>
+			</div>
 
 			<div class="item item-divider">
 				Description
 			</div>
 
-		  	<div class="item item-body">
+			<div class="item item-body">
 			  <p ng-bind-html="BOTTLES[id].wine.description" class="justified"><p>
-		  	</div>
-
-		  	<div class="item item-divider">
-				Service et dégustation
 			</div>
 
-		  	<div class="item item-body">
-			  	<i class="icon ion-thermometer"></i>°  <p>{{BOTTLES[id].wine.temperature}}</p>
-			  	<p ng-show="carafagewhite(BOTLLES[id].wine)"> Mettre en carafe une demi-heure avant le service de préférence.</p>
-			  	<p ng-show="carafagelightred(BOTLLES[id].wine)"> Mettre en carafe une heure avant le service de préférence.</p>
-			  	<p ng-show="carafagestrongred(BOTLLES[id].wine)"> Mettre en carafe deux heure avant le service de préférence.</p>
+			<div class="item item-divider">
+				Dégustation
+			</div>
+
+			<div class="item item-body">
 				<p ng-bind-html="BOTTLES[id].wine.degustation" class="justified"><p>
-		  	</div>
+			</div>
+			<div class="item item-divider">
+				Service
+			</div>
+
+			<div class="item item-body">
+				<p>
+					&nbsp;<i class="icon ion-thermometer"></i>° {{BOTTLES[id].wine.temperature}}
+				</p>
+				<p ng-show="carafagewhite(BOTTLES[id].wine)">
+					<i class="icon ion-beaker"></i> Mettre en carafe une demi-heure avant le service de préférence.
+				</p>
+				<p ng-show="carafagelightred(BOTTLES[id].wine)">
+					<i class="icon ion-beaker"></i> Mettre en carafe une heure avant le service de préférence.
+				</p>
+				<p ng-show="carafagestrongred(BOTTLES[id].wine)">
+					<i class="icon ion-beaker"></i> Mettre en carafe deux heure avant le service de préférence.
+				</p>
+			</div>
 
 		  
 		</div>
